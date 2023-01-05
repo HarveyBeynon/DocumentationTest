@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to TestDocumentation's documentation!
-=============================================
+This is test documentation I made for Auto-sim
+==============================================
 
 .. toctree::
    :maxdepth: 2
