@@ -1,11 +1,14 @@
 Test Documentation
 ==================
 
--  `Child
-   Page <https://rdmgroup-my.sharepoint.com/wiki/spaces/AUTOSIMDEV/pages/11337729/Child+Page>`__
-
 This is a test documentation to set up Read The Docs for Auto-sim’s
-Online Docs
+Online Docs.
+
+This file has been exported from confluence as a .doc, a python script
+is then used to convert the file to .rst and pushed to the github repo.
+If you are seeing this on Read The Docs then the script has worked
+
+- Harvey 06/01/2023
 
 -  `What is Lorem Ipsum? <#TestDocumentation-WhatisLoremIpsum?>`__
 

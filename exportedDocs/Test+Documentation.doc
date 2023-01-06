@@ -1,11 +1,11 @@
-Date: Fri, 6 Jan 2023 11:40:38 +0000 (UTC)
-Message-ID: <809199913.35.1673005238323@afebd92c5bb5>
+Date: Fri, 6 Jan 2023 14:25:00 +0000 (UTC)
+Message-ID: <1570831058.11.1673015100442@362d101e7597>
 Subject: Exported From Confluence
 MIME-Version: 1.0
 Content-Type: multipart/related; 
-	boundary="----=_Part_34_221446069.1673005238322"
+	boundary="----=_Part_10_1976918585.1673015100442"
 
-------=_Part_34_221446069.1673005238322
+------=_Part_10_1976918585.1673015100442
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 Content-Location: file:///C:/exported.html
@@ -232,20 +232,20 @@ d of the content */
 <body>
     <h1>Test Documentation</h1>
     <div class=3D"Section1">
-        <ul class=3D"childpages-macro">
-<li><a href=3D"/wiki/spaces/AUTOSIMDEV/pages/11337729/Child+Page" data-link=
-ed-resource-id=3D"11337729" data-linked-resource-version=3D"1" data-linked-=
-resource-type=3D"page">Child Page</a></li>
-</ul>
-<p>This is a test documentation to set up Read The Docs for Auto-sim=E2=80=
-=99s Online Docs</p>
+        <p>This is a test documentation to set up Read The Docs for Auto-si=
+m=E2=80=99s Online Docs.</p>
+<p>This file has been exported from confluence as a .doc, a python script i=
+s then used to convert the file to .rst and pushed to the github repo. If y=
+ou are seeing this on Read The Docs then the script has worked </p>
+<p>- Harvey 06/01/2023 </p>
+<p></p>
 <style type=3D"text/css">/*<![CDATA[*/
-div.rbtoc1673005238318 {padding: 0px;}
-div.rbtoc1673005238318 ul {list-style: disc;margin-left: 0px;}
-div.rbtoc1673005238318 li {margin-left: 0px;padding-left: 0px;}
+div.rbtoc1673015100437 {padding: 0px;}
+div.rbtoc1673015100437 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1673015100437 li {margin-left: 0px;padding-left: 0px;}
 
 /*]]>*/</style>
-<div class=3D"toc-macro rbtoc1673005238318">=20
+<div class=3D"toc-macro rbtoc1673015100437">=20
 <ul class=3D"toc-indentation">=20
 <li><a href=3D"#TestDocumentation-WhatisLoremIpsum?">What is Lorem Ipsum?</=
 a></li>=20
@@ -283,4 +283,4 @@ rum et Malorum" by Cicero are also reproduced in their exact original form,=
     </div>
 </body>
 </html>
-------=_Part_34_221446069.1673005238322--
+------=_Part_10_1976918585.1673015100442--
