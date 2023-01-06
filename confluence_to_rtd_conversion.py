@@ -17,12 +17,16 @@
 
 print("Running conversion script")
 
-# Add script that uses confluence REST API to export the page's to word
-# Currently this has to be done manually and the file needs to be placed in the exportedDocs directroy
-
 import os.path
 import win32com.client
+import subprocess
+import shutil
+import os
 
+# TODO Add script that uses confluence REST API to export the page's to word
+# Currently this has to be done manually and the file needs to be placed in the exportedDocs dir
+
+# Convert files in exportedDocs folder from .doc to .docx
 baseDir = 'exportedDocs\\' # Starting directory for directory walk
 
 word = win32com.client.Dispatch("Word.application")
@@ -50,24 +54,31 @@ for dir_path, dirs, files in os.walk(baseDir):
                         print('Failed to Convert: {0}'.format(file_path))
                         print(e)
 
-print("Converting Docx file to reStructuredText")
-# Find a way to obtain the name of the file for the pandoc command
-# Call the new docx file the same as the confluence filename
-# And delete the .doc file.
-import subprocess
+# TODO find a way to automate the filenames from the exported filename
+# TODO Create for loop to allow for multiple files
+# Call pandoc to convert the .docx to .rst
 subprocess.run(["pandoc", "exportedDocs/Test+Documentation.docx", "-o", "exportedDocs/testDocument.rst"])
-print("reStructedText file now created")
 
-print("Moving file to Docs directory")
-import shutil
+# Move the new page to the correct location in the "docs" folder
 shutil.move('exportedDocs/testDocument.rst', 'docs/pages/testDocument.rst')
 
-print("Pushing to GitHub")
+# Delete All docx file
+dir_name = "exportedDocs\\"
+test = os.listdir(dir_name)
+for item in test:
+    if item.endswith(".docx"):
+        os.remove(os.path.join(dir_name, item))
 
+# TODO create a for loop to append the path name to the index.rst for multiple files
+# Add the path to the file to the index.rst toc so that the new file will appear in the contents
+with open('docs/index.rst', 'r', encoding='utf-8') as file:
+    data = file.readlines() 
+data[10] = "pages/testDocument\n"
+with open('docs/index.rst', 'w', encoding='utf-8') as file:
+    file.writelines(data)
+
+# Commit and push to GitHub
 subprocess.run(["git", "add", "."])
-print("Git added")
 subprocess.run(["git", "commit", "-m", "'commit from python script'"])
-print("Git commit made")
 subprocess.run(["git", "push"])
-print("Git push - the new commit should be seen in the git repo")
-print("Read the docs is building the new documents")
+print("Convesion finished - new docs should now be viewable on Read the Docs")

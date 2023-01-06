@@ -6,9 +6,8 @@ Online Docs.
 
 This file has been exported from confluence as a .doc, a python script
 is then used to convert the file to .rst and pushed to the github repo.
-If you are seeing this on Read The Docs then the script has worked
-
-- Harvey 06/01/2023
+If you are seeing this on Read The Docs then the script has worked. NEW
+CHANGE
 
 -  `What is Lorem Ipsum? <#TestDocumentation-WhatisLoremIpsum?>`__
 
