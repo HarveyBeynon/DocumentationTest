@@ -10,6 +10,8 @@ This is test documentation I made for Auto-sim
    :maxdepth: 2
    :caption: Contents:
 
+   pages/Confluence
+
 Testing
 
 Indices and tables
