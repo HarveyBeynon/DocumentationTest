@@ -88,10 +88,18 @@ for dir_path, dirs, files in os.walk(baseDir):
 # TODO find a way to automate the filenames from the exported filename
 # TODO Create for loop to allow for multiple files
 # Call pandoc to convert the .docx to .rst
-subprocess.run(["pandoc", "exportedDocs/testDoc.docx", "-o", "exportedDocs/testDoc.rst"])
+subprocess.run(["pandoc", "exportedDocs/testDoc.docx", "-o", "exportedDocs/index.rst"])
+
+# Delete index.rst
+# Delete All docx file
+dir_name = "docs\\"
+test = os.listdir(dir_name)
+for item in test:
+    if item.endswith("index.rst"):
+        os.remove(os.path.join(dir_name, item))
 
 # Move the new page to the correct location in the "docs" folder
-shutil.move('exportedDocs/testDoc.rst', 'docs/pages/testDoc.rst')
+shutil.move('exportedDocs/index.rst', 'docs/index.rst')
 
 # Delete All docx file
 dir_name = "exportedDocs\\"
@@ -100,13 +108,13 @@ for item in test:
     if item.endswith(".docx"):
         os.remove(os.path.join(dir_name, item))
 
-# TODO create a for loop to append the path name to the index.rst for multiple files
-# Add the path to the file to the index.rst toc so that the new file will appear in the contents
-with open('docs/index.rst', 'r', encoding='utf-8') as file:
-    data = file.readlines() 
-data[10] = "\tpages/testDoc\n"
-with open('docs/index.rst', 'w', encoding='utf-8') as file:
-    file.writelines(data)
+# # TODO create a for loop to append the path name to the index.rst for multiple files
+# # Add the path to the file to the index.rst toc so that the new file will appear in the contents
+# with open('docs/index.rst', 'r', encoding='utf-8') as file:
+#     data = file.readlines() 
+# data[10] = "\tpages/testDoc\n"
+# with open('docs/index.rst', 'w', encoding='utf-8') as file:
+#     file.writelines(data)
 
 # TODO currently this scripts is called from a git bash shell - May need to get the git shh and secret key
 # if this script were to run from a an API call.
