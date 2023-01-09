@@ -27,25 +27,25 @@ import os
 # Currently this has to be done manually and the file needs to be placed in the exportedDocs dir
 
 # Confluence API
-from atlassian import Confluence
+# from atlassian import Confluence
 
-PARENT_PAGE_ID = '229377'
+# PARENT_PAGE_ID = '229377'
 
-# This creates connection object confluence with your credentials
-confluence = Confluence(
-    url='https://harveybeynon.atlassian.net/',
-    username='harveyibeynon@gmail.com',
-    password='Testpassword',
-    api_version="cloud"
-)
+# # This creates connection object confluence with your credentials
+# confluence = Confluence(
+#     url='https://harveybeynon.atlassian.net/',
+#     username='harveyibeynon@gmail.com',
+#     password='Testpassword',
+#     api_version="cloud"
+# )
 # Api token wYoTwfkXbGd2QO4BTDDQE304
-subprocess.run(["curl", "-D-", "-X", "GET", "-H", "Authorization: Basic aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0", "-H", "Content-Type: application/json", "https://harveybeynon.atlassian.net/wiki/exportword?pageId=229377", "--output", "exportedDocs/testDoc.doc"])
+# subprocess.run(["curl", "-D-", "-X", "GET", "-H", "Authorization: Basic aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0", "-H", "Content-Type: application/json", "https://harveybeynon.atlassian.net/wiki/exportword?pageId=229377", "--output", "exportedDocs/testDoc.doc"])
 # curl -D- \
 #    -X GET \
 #    -H "Authorization: Basic aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0" \
 #    -H "Content-Type: application/json" \
 #    "https://harveybeynon.atlassian.net/wiki/exportword?pageId=229377" \
-#    --output "exportedDocs/test.doc"
+#    --output "newtest.doc"
 
 # curl -D- -X GET -u "aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0" -H "Content-Type: application/json" "https://harveybeynon.atlassian.net/wiki/spaces/flyingpdf/pdfpageexport.action?pageId=229377" 
 
