@@ -102,11 +102,11 @@ for item in test:
 
 # TODO create a for loop to append the path name to the index.rst for multiple files
 # Add the path to the file to the index.rst toc so that the new file will appear in the contents
-with open('docs/index.rst', 'r', encoding='utf-8') as file:
-    data = file.readlines() 
-data[10] = "\tpages/testDoc\n"
-with open('docs/index.rst', 'w', encoding='utf-8') as file:
-    file.writelines(data)
+# with open('docs/index.rst', 'r', encoding='utf-8') as file:
+#     data = file.readlines() 
+# data[10] = "\tpages/testDoc\n"
+# with open('docs/index.rst', 'w', encoding='utf-8') as file:
+#     file.writelines(data)
 
 # TODO currently this scripts is called from a git bash shell - May need to get the git shh and secret key
 # if this script were to run from a an API call.

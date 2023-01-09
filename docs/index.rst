@@ -5,10 +5,10 @@ This is the main home page for the test documentation.
 Below are links to the other pages within the documentation.
 
 .. toctree::
-   :maxdepth: 2
+   :glob:
    :caption: Pages:
 
-	pages/testDoc
+	pages/*
 
 Testing
 
