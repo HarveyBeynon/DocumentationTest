@@ -15,15 +15,27 @@
 
 #pip install pypiwin32
 
-print("Running conversion script")
-
 import os.path
 import win32com.client
 import subprocess
 import shutil
 import os
 
+from dotenv import load_dotenv
+load_dotenv()
 
+API_KEY = os.getenv("API_KEY")
+
+# subprocess.run(["curl", "-D-", "-X", "GET", "-H", "Authorization: Basic aGFydmV5aWJleW5vbkBnbWFpbC5jb206a0VuNUFQUEk5ZWhUbDVsZkhSalo1MTM1", "Content-Type: application/json", "-H", "https://harveybeynon.atlassian.net/wiki/exportword?pageId=491526", "--output", "exportedDocs/apitest.doc"])
+
+subprocess.run(["curl", "-D-", "-X", "GET", "-H", f"Authorization: Basic {API_KEY}", "-H", "Content-Type: application/json", "https://harveybeynon.atlassian.net/wiki/exportword?pageId=491526", "--output", "exportedDocs/testAPI.doc"])
+
+# curl -D- \
+#    -X GET \
+#    -H "Authorization: Basic aGFydmV5aWJleW5vbkBnbWFpbC5jb206a0VuNUFQUEk5ZWhUbDVsZkhSalo1MTM1" \
+#    -H "Content-Type: application/json" \
+#    "https://harveybeynon.atlassian.net/wiki/exportword?pageId=491526" \
+#    --output "exportedDocs/test.doc"
 
 baseDir = 'exportedDocs\\' # Starting directory for directory walk
 
