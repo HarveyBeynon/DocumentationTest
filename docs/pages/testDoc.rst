@@ -1,9 +1,6 @@
 Test Doc
 ========
 
-This is the main home page for the documentation. Below are links to the
-child pages.
-
 -  `What is Lorem Ipsum? <#TestDoc-WhatisLoremIpsum?>`__
 
 -  `Where does is come from? <#TestDoc-Wheredoesiscomefrom?>`__
