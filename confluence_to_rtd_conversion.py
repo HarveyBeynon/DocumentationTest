@@ -89,10 +89,10 @@ for dir_path, dirs, files in os.walk(baseDir):
                         wordDoc = word.Documents.Open(file_path)
                         wordDoc.SaveAs2(docx_file, FileFormat = 16)
                         wordDoc.Close()
-                        print(file_name)
-                        print(file_path)
+
                         # Call pandoc to convert the .docx file to .rst
                         subprocess.run(["pandoc", f"{file_name}.docx", "-o", f"{file_name}.rst"])
+
                     except Exception as e:
                         print('Failed to Convert: {0}'.format(file_path))
                         print(e)
@@ -100,9 +100,11 @@ for dir_path, dirs, files in os.walk(baseDir):
 dir_name = "exportedDocs\\"
 test = os.listdir(dir_name)
 for item in test:
+
     # Delete the .docx files in the exportedDocs dir
     if (item.endswith(".docx")):
         os.remove(os.path.join(dir_name, item))
+        
     # Move all .rst files to the docs/pages dir
     if (item.endswith(".rst")):
         src_path = os.path.join("exportedDocs/", item)
