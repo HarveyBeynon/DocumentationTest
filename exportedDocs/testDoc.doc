@@ -1,11 +1,11 @@
-Date: Fri, 6 Jan 2023 14:25:00 +0000 (UTC)
-Message-ID: <1570831058.11.1673015100442@362d101e7597>
+Date: Mon, 9 Jan 2023 12:21:50 +0000 (UTC)
+Message-ID: <1511789568.243.1673266910930@8d510d69b49c>
 Subject: Exported From Confluence
 MIME-Version: 1.0
 Content-Type: multipart/related; 
-	boundary="----=_Part_10_1976918585.1673015100442"
+	boundary="----=_Part_242_887682901.1673266910929"
 
-------=_Part_10_1976918585.1673015100442
+------=_Part_242_887682901.1673266910929
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 Content-Location: file:///C:/exported.html
@@ -17,7 +17,7 @@ Content-Location: file:///C:/exported.html
 <head>
     <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
 ">
-    <title>Test Documentation</title>
+    <title>Docs Home page</title>
     <!--[if gte mso 9]>
     <xml>
         <o:OfficeDocumentSettings>
@@ -230,56 +230,18 @@ d of the content */
     </style>
 </head>
 <body>
-    <h1>Test Documentation</h1>
+    <h1>Docs Home page</h1>
     <div class=3D"Section1">
-        <p>This is a test documentation to set up Read The Docs for Auto-si=
-m=E2=80=99s Online Docs.</p>
-<p>This file has been exported from confluence as a .doc, a python script i=
-s then used to convert the file to .rst and pushed to the github repo. If y=
-ou are seeing this on Read The Docs then the script has worked. NEW CHANGE </p>
+        <p>This is the main home page for the documentation. Below are link=
+s to the child pages.</p>
 <p></p>
-<style type=3D"text/css">/*<![CDATA[*/
-div.rbtoc1673015100437 {padding: 0px;}
-div.rbtoc1673015100437 ul {list-style: disc;margin-left: 0px;}
-div.rbtoc1673015100437 li {margin-left: 0px;padding-left: 0px;}
-
-/*]]>*/</style>
-<div class=3D"toc-macro rbtoc1673015100437">=20
-<ul class=3D"toc-indentation">=20
-<li><a href=3D"#TestDocumentation-WhatisLoremIpsum?">What is Lorem Ipsum?</=
-a></li>=20
-<li><a href=3D"#TestDocumentation-Wheredoesiscomefrom?">Where does is come =
-from?</a></li>=20
-</ul>=20
-</div>
-<h2 id=3D"TestDocumentation-WhatisLoremIpsum?">What is Lorem Ipsum?</h2>
-<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and ty=
-pesetting industry. Lorem Ipsum has been the industry's standard dummy text=
- ever since the 1500s, when an unknown printer took a galley of type and sc=
-rambled it to make a type specimen book. It has survived not only five cent=
-uries, but also the leap into electronic typesetting, remaining essentially=
- unchanged. It was popularised in the 1960s with the release of Letraset sh=
-eets containing Lorem Ipsum passages, and more recently with desktop publis=
-hing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-<h2 id=3D"TestDocumentation-Wheredoesiscomefrom?">Where does is come from?<=
-/h2>
-<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It ha=
-s roots in a piece of classical Latin literature from 45 BC, making it over=
- 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney Co=
-llege in Virginia, looked up one of the more obscure Latin words, consectet=
-ur, from a Lorem Ipsum passage, and going through the cites of the word in =
-classical literature, discovered the undoubtable source. Lorem Ipsum comes =
-from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The E=
-xtremes of Good and Evil) by Cicero, written in 45 BC. This book is a treat=
-ise on the theory of ethics, very popular during the Renaissance. The first=
- line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in =
-section 1.10.32.</p>
-<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced bel=
-ow for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bono=
-rum et Malorum" by Cicero are also reproduced in their exact original form,=
- accompanied by English versions from the 1914 translation by H. Rackham</p=
->
+<ul class=3D"childpages-macro">
+<li><a href=3D"/wiki/spaces/MFS/pages/360449/Child+1" data-linked-resource-=
+id=3D"360449" data-linked-resource-version=3D"1" data-linked-resource-type=
+=3D"page">Child 1</a></li>
+</ul>
+<p></p>
     </div>
 </body>
 </html>
-------=_Part_10_1976918585.1673015100442--
+------=_Part_242_887682901.1673266910929--

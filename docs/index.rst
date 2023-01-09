@@ -8,7 +8,7 @@ Below are links to the other pages within the documentation.
    :maxdepth: 2
    :caption: Pages:
 
-pages/testDocument
+	pages/testDoc
 
 Testing
 
