@@ -1,10 +1,6 @@
 1 - Lorem Ipsum
 ===============
 
--  `What is Lorem Ipsum? <#id-1-LoremIpsum-WhatisLoremIpsum?>`__
-
--  `Where does is come from? <#id-1-LoremIpsum-Wheredoesiscomefrom?>`__
-
 What is Lorem Ipsum?
 --------------------
 

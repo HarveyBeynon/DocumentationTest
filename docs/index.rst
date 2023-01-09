@@ -14,9 +14,4 @@ Last updated: 13:40 09/01
 
 Testing Testing Testing Testing Testing Testing Testing Testing Testing 
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
