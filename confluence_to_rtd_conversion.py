@@ -23,52 +23,11 @@ import subprocess
 import shutil
 import os
 
-# TODO Add script that uses confluence REST API to export the page's to word
-# Currently this has to be done manually and the file needs to be placed in the exportedDocs dir
-
-# Confluence API
-# from atlassian import Confluence
-
-# PARENT_PAGE_ID = '229377'
-
-# # This creates connection object confluence with your credentials
-# confluence = Confluence(
-#     url='https://harveybeynon.atlassian.net/',
-#     username='harveyibeynon@gmail.com',
-#     password='Testpassword',
-#     api_version="cloud"
-# )
-# Api token wYoTwfkXbGd2QO4BTDDQE304
-
-# subprocess.run(["curl", "-X" "GET", "-H", "Authorization: Basic aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0", "Content-Type: application/json", "https://harveybeynon.atlassian.net/wiki/exportword?pageId=229377", "--output", "exportedDocs/testDoc.doc"])
-#subprocess.run(["curl", "-D-", "-X", "GET", "-H", "aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0", "-H", "Content-Type: application/json", "https://harveybeynon.atlassian.net/wiki/exportword?pageId=229377", "--output", "exportedDocs/testDoc.doc"])
-
-# curl -D- \
-#    -X GET \
-#    -H -v "Authorization: Basic aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0" \
-#    -H "Content-Type: application/json" \
-#    "https://harveybeynon.atlassian.net/wiki/exportword?pageId=229377" \
-#    --output "newtest.doc"
-
-# curl -D- \
-#    -X GET \
-#    -H "Authorization: Basic aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0" \
-#    -H "Content-Type: application/json" \
-#    "https://harveybeynon.atlassian.net/wiki/exportword?pageId=229377" \
-#    --output "exportedDocs/test.doc"
 
 
-# curl -D- -X GET -u "aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0" -H "Content-Type: application/json" "https://harveybeynon.atlassian.net/wiki/spaces/flyingpdf/pdfpageexport.action?pageId=229377" 
-
-# --output "exportedDocs/test.pdf"
-
-# subprocess.run(["curl", "-v", "-L", "-u", "'harveyibeynon@gmail.com:Testpassword'", "-H", "'X-Atlassian-Token: no-check'", "'https://harveybeynon.atlassian.net/wiki/spaces/flyingpdf/pdfpageexport.action?pageId=229377'", "--output", "'test.pdf'"])
-
-# curl -v -L -H "aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0" "https://harveybeynon.atlassian.net/wiki/spaces/flyingpdf/pdfpageexport.action?pageId=229377" --output "exportedDocs/test.pdf"
-
-# Convert files in exportedDocs folder from .doc to .docx
 baseDir = 'exportedDocs\\' # Starting directory for directory walk
 
+# Convert exported .doc file to .docx for pandoc
 word = win32com.client.Dispatch("Word.application")
 
 for dir_path, dirs, files in os.walk(baseDir):
@@ -104,17 +63,17 @@ for item in test:
     # Delete the .docx files in the exportedDocs dir
     if (item.endswith(".docx")):
         os.remove(os.path.join(dir_name, item))
-        
+
     # Move all .rst files to the docs/pages dir
     if (item.endswith(".rst")):
         src_path = os.path.join("exportedDocs/", item)
         dst_path = os.path.join("docs/pages/", item)
         shutil.move(src_path, dst_path)
 
-# TODO currently this scripts is called from a git bash shell - May need to get the git shh and secret key
-# if this script were to run from a an API call.
-# Commit and push to GitHub
-subprocess.run(["git", "add", "."])
-subprocess.run(["git", "commit", "-m", "'commit from python script'"])
-subprocess.run(["git", "push"])
-print("Convesion finished - new docs should now be viewable on Read the Docs")
+# # TODO currently this scripts is called from a git bash shell - May need to get the git shh and secret key
+# # if this script were to run from a an API call.
+# # Commit and push to GitHub
+# subprocess.run(["git", "add", "."])
+# subprocess.run(["git", "commit", "-m", "'commit from python script'"])
+# subprocess.run(["git", "push"])
+# print("Convesion finished - new docs should now be viewable on Read the Docs")
