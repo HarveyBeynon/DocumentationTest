@@ -27,20 +27,20 @@ import os
 # Currently this has to be done manually and the file needs to be placed in the exportedDocs dir
 
 # Confluence API
-from atlassian import Confluence
+# from atlassian import Confluence
 
-PARENT_PAGE_ID = '229377'
+# PARENT_PAGE_ID = '229377'
 
-# This creates connection object confluence with your credentials
-confluence = Confluence(
-    url='https://harveybeynon.atlassian.net/',
-    username='harveyibeynon@gmail.com',
-    password='Testpassword',
-    api_version="cloud"
-)
+# # This creates connection object confluence with your credentials
+# confluence = Confluence(
+#     url='https://harveybeynon.atlassian.net/',
+#     username='harveyibeynon@gmail.com',
+#     password='Testpassword',
+#     api_version="cloud"
+# )
 # Api token wYoTwfkXbGd2QO4BTDDQE304
 
-subprocess.run(["curl", "-X" "GET", "-H", "Authorization: Basic aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0", "Content-Type: application/json", "https://harveybeynon.atlassian.net/wiki/exportword?pageId=229377", "--output", "exportedDocs/testDoc.doc"])
+# subprocess.run(["curl", "-X" "GET", "-H", "Authorization: Basic aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0", "Content-Type: application/json", "https://harveybeynon.atlassian.net/wiki/exportword?pageId=229377", "--output", "exportedDocs/testDoc.doc"])
 #subprocess.run(["curl", "-D-", "-X", "GET", "-H", "aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0", "-H", "Content-Type: application/json", "https://harveybeynon.atlassian.net/wiki/exportword?pageId=229377", "--output", "exportedDocs/testDoc.doc"])
 
 # curl -D- \
@@ -50,12 +50,12 @@ subprocess.run(["curl", "-X" "GET", "-H", "Authorization: Basic aGFydmV5aWJleW5v
 #    "https://harveybeynon.atlassian.net/wiki/exportword?pageId=229377" \
 #    --output "newtest.doc"
 
-curl -D- \
-   -X GET \
-   -H "Authorization: Basic aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0" \
-   -H "Content-Type: application/json" \
-   "https://harveybeynon.atlassian.net/wiki/exportword?pageId=229377" \
-   --output "exportedDocs/test.doc"
+# curl -D- \
+#    -X GET \
+#    -H "Authorization: Basic aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0" \
+#    -H "Content-Type: application/json" \
+#    "https://harveybeynon.atlassian.net/wiki/exportword?pageId=229377" \
+#    --output "exportedDocs/test.doc"
 
 
 # curl -D- -X GET -u "aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0" -H "Content-Type: application/json" "https://harveybeynon.atlassian.net/wiki/spaces/flyingpdf/pdfpageexport.action?pageId=229377" 
@@ -67,62 +67,58 @@ curl -D- \
 # curl -v -L -H "aGFydmV5aWJleW5vbkBnbWFpbC5jb206d1lvVHdma1hiR2QyUU80QlRERFFFMzA0" "https://harveybeynon.atlassian.net/wiki/spaces/flyingpdf/pdfpageexport.action?pageId=229377" --output "exportedDocs/test.pdf"
 
 # Convert files in exportedDocs folder from .doc to .docx
-# baseDir = 'exportedDocs\\' # Starting directory for directory walk
+baseDir = 'exportedDocs\\' # Starting directory for directory walk
 
-# word = win32com.client.Dispatch("Word.application")
+word = win32com.client.Dispatch("Word.application")
 
-# for dir_path, dirs, files in os.walk(baseDir):
-#     for file_name in files:
+for dir_path, dirs, files in os.walk(baseDir):
+    for file_name in files:
 
-#         file_path = os.path.join(dir_path, file_name)
-#         file_name, file_extension = os.path.splitext(file_path)
+        file_path = os.path.join(dir_path, file_name)
+        file_name, file_extension = os.path.splitext(file_path)
 
-#         if "~$" not in file_name:
-#             if file_extension.lower() == '.doc': #
-#                 docx_file = '{0}{1}'.format(file_path, 'x')
+        if "~$" not in file_name:
+            if file_extension.lower() == '.doc': #
+                docx_file = '{0}{1}'.format(file_path, 'x')
 
-#                 if not os.path.isfile(docx_file): # Skip conversion where docx file already exists
+                if not os.path.isfile(docx_file): # Skip conversion where docx file already exists
 
-#                     file_path = os.path.abspath(file_path)
-#                     docx_file = os.path.abspath(docx_file)
-#                     try:
-#                         wordDoc = word.Documents.Open(file_path)
-#                         wordDoc.SaveAs2(docx_file, FileFormat = 16)
-#                         wordDoc.Close()
-#                         print("File has successfully been converted")
-#                     except Exception as e:
-#                         print('Failed to Convert: {0}'.format(file_path))
-#                         print(e)
+                    file_path = os.path.abspath(file_path)
+                    docx_file = os.path.abspath(docx_file)
+                    try:
+                        wordDoc = word.Documents.Open(file_path)
+                        wordDoc.SaveAs2(docx_file, FileFormat = 16)
+                        wordDoc.Close()
+                        print("File has successfully been converted")
+                    except Exception as e:
+                        print('Failed to Convert: {0}'.format(file_path))
+                        print(e)
 
-# #  Saving the file name as a variable
+#  Saving the file name as a variable
 
-# # TODO find a way to automate the filenames from the exported filename
-# # TODO Create for loop to allow for multiple files
-# # Call pandoc to convert the .docx to .rst
-# subprocess.run(["pandoc", "exportedDocs/testDoc.docx", "-o", "exportedDocs/testDoc.rst"])
+# TODO find a way to automate the filenames from the exported filename
+# TODO Create for loop to allow for multiple files
+# Call pandoc to convert the .docx to .rst
+subprocess.run(["pandoc", "exportedDocs/1+-+Lorem+Ipsum.docx", "-o", "exportedDocs/1+-+Lorem+Ipsum.rst"])
 
-# # Move the new page to the correct location in the "docs" folder
-# shutil.move('exportedDocs/testDoc.rst', 'docs/pages/testDoc.rst')
+# Move the new page to the correct location in the "docs" folder
+shutil.move('exportedDocs/1+-+Lorem+Ipsum.rst', 'docs/pages/1+-+Lorem+Ipsum.rst')
 
-# # Delete All docx file
-# dir_name = "exportedDocs\\"
-# test = os.listdir(dir_name)
-# for item in test:
-#     if item.endswith(".docx", ".docs"):
-#         os.remove(os.path.join(dir_name, item))
+# Delete All docx file
+dir_name = "exportedDocs\\"
+test = os.listdir(dir_name)
+for item in test:
+    if item.endswith(".docx"):
+        os.remove(os.path.join(dir_name, item))
 
-# # TODO create a for loop to append the path name to the index.rst for multiple files
-# # Add the path to the file to the index.rst toc so that the new file will appear in the contents
-# # with open('docs/index.rst', 'r', encoding='utf-8') as file:
-# #     data = file.readlines() 
-# # data[10] = "\tpages/testDoc\n"
-# # with open('docs/index.rst', 'w', encoding='utf-8') as file:
-# #     file.writelines(data)
+for item in test:
+    if item.endswith(".doc"):
+        os.remove(os.path.join(dir_name, item))
 
-# # TODO currently this scripts is called from a git bash shell - May need to get the git shh and secret key
-# # if this script were to run from a an API call.
-# # Commit and push to GitHub
-# subprocess.run(["git", "add", "."])
-# subprocess.run(["git", "commit", "-m", "'commit from python script'"])
-# subprocess.run(["git", "push"])
-# print("Convesion finished - new docs should now be viewable on Read the Docs")
+# TODO currently this scripts is called from a git bash shell - May need to get the git shh and secret key
+# if this script were to run from a an API call.
+# Commit and push to GitHub
+subprocess.run(["git", "add", "."])
+subprocess.run(["git", "commit", "-m", "'commit from python script'"])
+subprocess.run(["git", "push"])
+print("Convesion finished - new docs should now be viewable on Read the Docs")
