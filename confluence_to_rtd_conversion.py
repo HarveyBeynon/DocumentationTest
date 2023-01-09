@@ -88,18 +88,10 @@ for dir_path, dirs, files in os.walk(baseDir):
 # TODO find a way to automate the filenames from the exported filename
 # TODO Create for loop to allow for multiple files
 # Call pandoc to convert the .docx to .rst
-subprocess.run(["pandoc", "exportedDocs/testDoc.docx", "-o", "exportedDocs/index.rst"])
-
-# Delete index.rst
-# Delete All docx file
-dir_name = "docs\\"
-test = os.listdir(dir_name)
-for item in test:
-    if item.endswith("index.rst"):
-        os.remove(os.path.join(dir_name, item))
+subprocess.run(["pandoc", "exportedDocs/testDoc.docx", "-o", "exportedDocs/testDoc.rst"])
 
 # Move the new page to the correct location in the "docs" folder
-shutil.move('exportedDocs/index.rst', 'docs/index.rst')
+shutil.move('exportedDocs/testDoc.rst', 'docs/pages/testDoc.rst')
 
 # Delete All docx file
 dir_name = "exportedDocs\\"
