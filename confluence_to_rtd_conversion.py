@@ -89,31 +89,25 @@ for dir_path, dirs, files in os.walk(baseDir):
                         wordDoc = word.Documents.Open(file_path)
                         wordDoc.SaveAs2(docx_file, FileFormat = 16)
                         wordDoc.Close()
-                        print("File has successfully been converted")
+                        print(file_name)
+                        print(file_path)
+                        # Call pandoc to convert the .docx file to .rst
+                        subprocess.run(["pandoc", f"{file_name}.docx", "-o", f"{file_name}.rst"])
                     except Exception as e:
                         print('Failed to Convert: {0}'.format(file_path))
                         print(e)
 
-#  Saving the file name as a variable
-
-# TODO find a way to automate the filenames from the exported filename
-# TODO Create for loop to allow for multiple files
-# Call pandoc to convert the .docx to .rst
-subprocess.run(["pandoc", "exportedDocs/1+-+Lorem+Ipsum.docx", "-o", "exportedDocs/1+-+Lorem+Ipsum.rst"])
-
-# Move the new page to the correct location in the "docs" folder
-shutil.move('exportedDocs/1+-+Lorem+Ipsum.rst', 'docs/pages/1+-+Lorem+Ipsum.rst')
-
-# Delete All docx file
 dir_name = "exportedDocs\\"
 test = os.listdir(dir_name)
 for item in test:
-    if item.endswith(".docx"):
+    # Delete the .docx files in the exportedDocs dir
+    if (item.endswith(".docx")):
         os.remove(os.path.join(dir_name, item))
-
-for item in test:
-    if item.endswith(".doc"):
-        os.remove(os.path.join(dir_name, item))
+    # Move all .rst files to the docs/pages dir
+    if (item.endswith(".rst")):
+        src_path = os.path.join("exportedDocs/", item)
+        dst_path = os.path.join("docs/pages/", item)
+        shutil.move(src_path, dst_path)
 
 # TODO currently this scripts is called from a git bash shell - May need to get the git shh and secret key
 # if this script were to run from a an API call.
