@@ -13,9 +13,20 @@ load_dotenv()
 API_KEY = os.getenv("API_KEY")
 
 # TODO Cycle through each confluence page that is to be published to read the docs and get their ID nums.
-# TODO create a loop that exports each requested page (cycle the page - id)
+
+
+# pageIds = ["229377", "851969", "491526"] # Hardcoding page Ids into the array
+# for page in pageIds:
+#     print(page)
+#     subprocess.run(["curl", "-D-", "-X", "GET", "-H", f"Authorization: Basic {API_KEY}", "-H", "Content-Type: application/json", f"https://harveybeynon.atlassian.net/wiki/exportword?pageId={page}", "--output", f"exportedDocs/{page}.doc"]) # Need to find file names
+
+pageIds = {"Lorem+Ipsum":"229377", "Lorem+Ipsum+Example":"851969", "API+Page":"491526"} # Hardcoding pageIds and Filenames
+for key, value in pageIds.items():
+    print(key, value)
+    subprocess.run(["curl", "-D-", "-X", "GET", "-H", f"Authorization: Basic {API_KEY}", "-H", "Content-Type: application/json", f"https://harveybeynon.atlassian.net/wiki/exportword?pageId={value}", "--output", f"exportedDocs/{key}.doc"])
+
 # Export Confluence file as .doc
-subprocess.run(["curl", "-D-", "-X", "GET", "-H", f"Authorization: Basic {API_KEY}", "-H", "Content-Type: application/json", "https://harveybeynon.atlassian.net/wiki/exportword?pageId=491526", "--output", "exportedDocs/testAPI.doc"])
+# subprocess.run(["curl", "-D-", "-X", "GET", "-H", f"Authorization: Basic {API_KEY}", "-H", "Content-Type: application/json", "https://harveybeynon.atlassian.net/wiki/exportword?pageId=491526", "--output", "exportedDocs/testAPI.doc"])
 
 # curl -D- \
 #    -X GET \
@@ -72,7 +83,7 @@ for item in test:
 # TODO currently this scripts is called from a git bash shell - May need to get the git shh and secret key
 # if this script were to run from a an API call.
 # Commit and push to GitHub
-subprocess.run(["git", "add", "."])
-subprocess.run(["git", "commit", "-m", "'commit from python script'"])
-subprocess.run(["git", "push"])
-print("Convesion finished - new docs should now be viewable on Read the Docs")
+# subprocess.run(["git", "add", "."])
+# subprocess.run(["git", "commit", "-m", "'commit from python script'"])
+# subprocess.run(["git", "push"])
+# print("Convesion finished - new docs should now be viewable on Read the Docs")
