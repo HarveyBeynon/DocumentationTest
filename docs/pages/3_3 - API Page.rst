@@ -26,3 +26,7 @@ Mauris eleifend sem aliquet enim iaculis porta. Aliquam dapibus quis
 lacus ut condimentum. Cras efficitur ut sapien ac venenatis. Nulla
 blandit ante metus, ut mattis velit blandit vel. Donec sit amet
 venenatis est. Donec mollis rhoncus quam, at auctor justo sagittis eget.
+
+.. image:: media/3.jpg
+   :width: 4.875in
+   :height: 3.23958in

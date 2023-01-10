@@ -50,3 +50,7 @@ magna. Nullam tincidunt lacus sit amet pellentesque vestibulum. Cras est
 sapien, dapibus at odio pulvinar, viverra venenatis magna. Nullam
 ultrices mauris ac libero faucibus aliquam. Vestibulum ante ipsum primis
 in faucibus orci luctus et ultrices posuere cubilia curae;
+
+.. image:: media/2.gif
+   :width: 3.33333in
+   :height: 1.875in

@@ -118,14 +118,28 @@ API_KEY = os.getenv("API_KEY")
 # with open('docs/pages/4_4 - Hello Craig.rst', 'w') as file:
 #     file.write(filedata)
 
-text = ".. image::" # if any line contains this text, I want to modify the whole line.
-new_text = ".. image:: media/1.jpg"
-newline = "\n"
-x = fileinput.input(files="docs/pages/4_4 - Hello Craig.rst", inplace=1)
-for line in x:
-    if text in line:
-        line = new_text + newline
-    sys.stdout.write(line)
+
+
+def replace_image_line(page, image_line):
+    text = ".. image::" # if any line contains this text, I want to modify the whole line.
+    new_line = "\n"
+    for file_name in os.walk('docs/pages/'):
+        x = fileinput.input(page, inplace=1)
+        for line in x:
+            if text in line:
+                line = image_line + new_line
+            sys.stdout.write(line)
+
+replace_image_line("docs/pages/1_1 - Lorem Ipsum.rst", ".. image:: media/1.jpg")
+replace_image_line("docs/pages/2_2 - Lorem Ipsum Example.rst", ".. image:: media/2.gif")
+replace_image_line("docs/pages/3_3 - API Page.rst", ".. image:: media/3.jpg")
+replace_image_line("docs/pages/4_4 - Hello Craig.rst", ".. image:: media/4.jpg")
+
+# x = fileinput.input(files="docs/pages/4_4 - Hello Craig.rst", inplace=1)
+# for line in x:
+#     if text in line:
+#         line = new_text + newline
+#     sys.stdout.write(line)
 
 # TODO currently this scripts is called from a git bash shell - May need to get the git shh and secret key
 # if this script were to run from a an API call.
