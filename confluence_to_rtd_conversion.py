@@ -4,6 +4,8 @@ import subprocess
 import shutil
 import json
 import os
+import sys
+import fileinput
 
 
 from dotenv import load_dotenv
@@ -107,6 +109,14 @@ for dir_path, dirs, files in os.walk(base_dir):
 
 delete_files_in_dir("exported_docs/", ".docx")
 move_files("exported_docs/", "docs/pages/", ".rst")
+
+# Replace images in .rst
+with open('docs/pages/4_4 - Hello Craig.rst', 'r') as file:
+    filedata = file.read()
+    filedata = filedata.replace('image1.jpeg', '1.jpg')
+
+with open('docs/pages/4_4 - Hello Craig.rst', 'w') as file:
+    file.write(filedata)
 
 # TODO currently this scripts is called from a git bash shell - May need to get the git shh and secret key
 # if this script were to run from a an API call.

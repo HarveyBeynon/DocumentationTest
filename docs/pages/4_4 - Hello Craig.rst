@@ -7,6 +7,6 @@ fhndjskhfjksdhkj
 
 jdkljfklsjf]\\
 
-.. image:: media/image1.jpeg
+.. image:: media/1.jpg
    :width: 4.875in
    :height: 3.25in
