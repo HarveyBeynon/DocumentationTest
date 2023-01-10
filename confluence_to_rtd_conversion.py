@@ -118,8 +118,6 @@ API_KEY = os.getenv("API_KEY")
 # with open('docs/pages/4_4 - Hello Craig.rst', 'w') as file:
 #     file.write(filedata)
 
-
-
 def replace_image_line(page, image_line):
     text = ".. image::" # if any line contains this text, I want to modify the whole line.
     new_line = "\n"
@@ -130,10 +128,14 @@ def replace_image_line(page, image_line):
                 line = image_line + new_line
             sys.stdout.write(line)
 
-replace_image_line("docs/pages/1_1 - Lorem Ipsum.rst", ".. image:: media/1.jpg")
-replace_image_line("docs/pages/2_2 - Lorem Ipsum Example.rst", ".. image:: media/2.gif")
-replace_image_line("docs/pages/3_3 - API Page.rst", ".. image:: media/3.jpg")
-replace_image_line("docs/pages/4_4 - Hello Craig.rst", ".. image:: media/4.jpg")
+# pages_files = os.listdir('docs/pages/')
+# print(str(pages_files))
+
+
+replace_image_line("docs/pages/1_1 - Lorem Ipsum.rst", ".. image:: docs/media/1.jpg")
+replace_image_line("docs/pages/2_2 - Lorem Ipsum Example.rst", ".. image:: docs/media/2.gif")
+replace_image_line("docs/pages/3_3 - API Page.rst", ".. image:: docs/media/3.jpg")
+replace_image_line("docs/pages/4_4 - Hello Craig.rst", ".. image:: docs/media/4.jpg")
 
 # x = fileinput.input(files="docs/pages/4_4 - Hello Craig.rst", inplace=1)
 # for line in x:
