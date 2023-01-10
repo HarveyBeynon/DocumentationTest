@@ -2,7 +2,9 @@ import os.path
 import win32com.client
 import subprocess
 import shutil
+import json
 import os
+
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -11,8 +13,8 @@ API_KEY = os.getenv("API_KEY")
 
 # Delete all files in a given directory
 def delete_files_in_dir(dir_name, extension):
-    currentDir = os.listdir(dir_name)
-    for item in currentDir:
+    current_dir = os.listdir(dir_name)
+    for item in current_dir:
         if (item.endswith(extension)):
             os.remove(os.path.join(dir_name, item))
 
@@ -25,25 +27,57 @@ def move_files(src_dir, dst_dir, extension):
             dst_path = os.path.join(dst_dir, item)
             shutil.move(src_path, dst_path)
 
-delete_files_in_dir("exportedDocs/", ".doc")
+delete_files_in_dir("exported_docs/", ".doc")
 delete_files_in_dir("docs/pages/", ".rst")
+delete_files_in_dir("API_response/", "space_content")
 
 # TODO Cycle through each confluence page that is to be published to read the docs and get their ID nums.
+subprocess.run(["curl", "-D-", "-X", "GET", "-H", f"Authorization: Basic {API_KEY}", "-H", "Content-Type: application/json", f"https://harveybeynon.atlassian.net/wiki/rest/api/space/MFS/content?expand=children.page&type=page&limit=9999", "--output", "API_response/space_content.json"])
+
+# Storing values from the json file
+page_ids = []
+page_title = []
+with open("API_response/space_content.json", "r", encoding="utf-8") as f:
+    data = json.load(f)
+    
+    results_data = data["page"]["results"]
+
+    for results in results_data:
+        for key, value in results.items():
+            if key == 'id':
+                page_ids.append(value)
+            if key == 'title':
+                # might need to remove whitespace
+                page_title.append(value)
+
+# Creating dictionary from id and title array 
+page_info = {}
+for key in page_title:
+    for value in page_ids:
+        page_info[key] = value
+        page_ids.remove(value)
+        break
+
+# Sorting dictionary alphabetically
+sorted_page_info = {key : value for key, value in sorted(page_info.items())}
+ 
+# Printing resultant dictionary
+print("Resultant dictionary is : " + str(sorted_page_info))
 
 # Exporting confluence page as .doc
-# NOTE - Read the Docs lists the files alphabetically, hence it will be good paractise to number the files
-pageIds = {"Lorem+Ipsum":"229377", "Lorem+Ipsum+Example":"851969", "API+Page":"491526"} # Hardcoding pageIds and Filenames - NOTE these file need to be in order.
-pageNum = 1
-for key, value in pageIds.items():
-    subprocess.run(["curl", "-D-", "-X", "GET", "-H", f"Authorization: Basic {API_KEY}", "-H", "Content-Type: application/json", f"https://harveybeynon.atlassian.net/wiki/exportword?pageId={value}", "--output", f"exportedDocs/{pageNum}+{key}.doc"])
-    pageNum += 1
+# NOTE - Read the Docs lists the files alphabetically by file name
+# page_ids = {"Lorem+Ipsum":"229377", "Lorem+Ipsum+Example":"851969", "API+Page":"491526"} # Hardcoding pageIds and Filenames - NOTE these file need to be in order.
+page_num = 1
+for key, value in sorted_page_info.items():
+    subprocess.run(["curl", "-D-", "-X", "GET", "-H", f"Authorization: Basic {API_KEY}", "-H", "Content-Type: application/json", f"https://harveybeynon.atlassian.net/wiki/exportword?pageId={value}", "--output", f"exported_docs/{page_num}_{key}.doc"])
+    page_num += 1
 
-baseDir = 'exportedDocs\\' # Starting directory for directory walk
+base_dir = 'exported_docs\\' # Starting directory for directory walk
 
 # Convert exported .doc file to .docx for pandoc
 word = win32com.client.Dispatch("Word.application")
 
-for dir_path, dirs, files in os.walk(baseDir):
+for dir_path, dirs, files in os.walk(base_dir):
     for file_name in files:
 
         file_path = os.path.join(dir_path, file_name)
@@ -58,9 +92,9 @@ for dir_path, dirs, files in os.walk(baseDir):
                     file_path = os.path.abspath(file_path)
                     docx_file = os.path.abspath(docx_file)
                     try:
-                        wordDoc = word.Documents.Open(file_path)
-                        wordDoc.SaveAs2(docx_file, FileFormat = 16)
-                        wordDoc.Close()
+                        word_doc = word.Documents.Open(file_path)
+                        word_doc.SaveAs2(docx_file, FileFormat = 16)
+                        word_doc.Close()
 
                         # Call pandoc to convert the .docx file to .rst
                         subprocess.run(["pandoc", f"{file_name}.docx", "-o", f"{file_name}.rst"])
@@ -69,8 +103,8 @@ for dir_path, dirs, files in os.walk(baseDir):
                         print('Failed to Convert: {0}'.format(file_path))
                         print(e)
 
-delete_files_in_dir("exportedDocs/", ".docx")
-move_files("exportedDocs/", "docs/pages/", ".rst")
+delete_files_in_dir("exported_docs/", ".docx")
+move_files("exported_docs/", "docs/pages/", ".rst")
 
 # TODO currently this scripts is called from a git bash shell - May need to get the git shh and secret key
 # if this script were to run from a an API call.

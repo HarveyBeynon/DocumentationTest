@@ -1,4 +1,4 @@
-Lorem Ipsum Example
+2 - Lorem Ipsum Example
 =======================
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
