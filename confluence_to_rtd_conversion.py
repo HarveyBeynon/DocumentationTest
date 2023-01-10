@@ -31,7 +31,7 @@ delete_files_in_dir("exported_docs/", ".doc")
 delete_files_in_dir("docs/pages/", ".rst")
 delete_files_in_dir("API_response/", "space_content")
 
-# TODO Cycle through each confluence page that is to be published to read the docs and get their ID nums.
+# Access the space's content
 subprocess.run(["curl", "-D-", "-X", "GET", "-H", f"Authorization: Basic {API_KEY}", "-H", "Content-Type: application/json", f"https://harveybeynon.atlassian.net/wiki/rest/api/space/MFS/content?expand=children.page&type=page&limit=9999", "--output", "API_response/space_content.json"])
 
 # Storing values from the json file
@@ -102,6 +102,8 @@ for dir_path, dirs, files in os.walk(base_dir):
                     except Exception as e:
                         print('Failed to Convert: {0}'.format(file_path))
                         print(e)
+
+#TODO - get the images from every file, save them to a new folder, change the images in a file to point to the correct image path
 
 delete_files_in_dir("exported_docs/", ".docx")
 move_files("exported_docs/", "docs/pages/", ".rst")
