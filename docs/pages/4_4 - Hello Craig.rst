@@ -7,6 +7,6 @@ fhndjskhfjksdhkj
 
 jdkljfklsjf]\\
 
-.. image:: https://res.cloudinary.com/dllhy0pbg/image/upload/v1673360493/cld-sample-5.jpg
+.. image:: media/image1.jpeg
    :width: 4.875in
-   :height: 3.23958in
+   :height: 3.25in
