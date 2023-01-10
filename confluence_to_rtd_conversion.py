@@ -109,7 +109,7 @@ move_files("exported_docs/", "docs/pages/", ".rst")
 # TODO currently this scripts is called from a git bash shell - May need to get the git shh and secret key
 # if this script were to run from a an API call.
 # Commit and push to GitHub
-# subprocess.run(["git", "add", "."])
-# subprocess.run(["git", "commit", "-m", "'commit from python script'"])
-# subprocess.run(["git", "push"])
-# print("Convesion finished - new docs should now be viewable on Read the Docs")
+subprocess.run(["git", "add", "."])
+subprocess.run(["git", "commit", "-m", "'commit from python script'"])
+subprocess.run(["git", "push"])
+print("Convesion finished - new docs should now be viewable on Read the Docs")
