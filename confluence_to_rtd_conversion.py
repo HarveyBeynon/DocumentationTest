@@ -7,7 +7,6 @@ import os
 import sys
 import fileinput
 
-
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -105,32 +104,12 @@ for dir_path, dirs, files in os.walk(base_dir):
                         print('Failed to Convert: {0}'.format(file_path))
                         print(e)
 
-#TODO - get the images from every file, save them to a new folder, change the images in a file to point to the correct image path
-
 delete_files_in_dir("exported_docs/", ".docx")
 move_files("exported_docs/", "docs/pages/", ".rst")
 
-# Replace images in .rst
-# with open('docs/pages/4_4 - Hello Craig.rst', 'r') as file:
-#     filedata = file.read()
-#     filedata = filedata.replace('image1.jpeg', '1.jpg')
-
-# with open('docs/pages/4_4 - Hello Craig.rst', 'w') as file:
-#     file.write(filedata)
-
-# def replace_image_line(page, image_line):
-#     text = ".. image::" # if any line contains this text, I want to modify the whole line.
-#     new_line = "\n"
-#     for file_name in os.walk('docs/pages/'):
-#         x = fileinput.input(page, inplace=1)
-#         for line in x:
-#             if text in line:
-#                 line = image_line + new_line
-#             sys.stdout.write(line)
-
+# Changing the image path from pandoc's conversion to the images in the media dir
 pages_files = os.listdir('docs/pages/')
 pages_files.remove('media')
-
 media_files = os.listdir('docs/pages/media')
 
 text = ".. image::"
@@ -146,34 +125,10 @@ for file in pages_files:
             media_index+=1
         sys.stdout.write(line)
 
-
-# for files in pages_files:
-#     x = fileinput.input(pages_files[page_index], inplace=1)
-#     for line in x:
-#         if text in line:
-#             line = '.. image:: media/' + media_files[media_index]
-#             print(media_files[media_index])
-#             media_index+=1
-#         sys.stdout.write(line)
-#     page_index+=1
-
-
-
-# replace_image_line("docs/pages/1_1 - Lorem Ipsum.rst", ".. image:: media/1.jpg")
-# replace_image_line("docs/pages/2_2 - Lorem Ipsum Example.rst", ".. image:: media/2.gif")
-# replace_image_line("docs/pages/3_3 - API Page.rst", ".. image:: media/3.jpg")
-# replace_image_line("docs/pages/4_4 - Hello Craig.rst", ".. image:: media/4.jpg")
-
-# x = fileinput.input(files="docs/pages/4_4 - Hello Craig.rst", inplace=1)
-# for line in x:
-#     if text in line:
-#         line = new_text + newline
-#     sys.stdout.write(line)
-
 # TODO currently this scripts is called from a git bash shell - May need to get the git shh and secret key
 # if this script were to run from a an API call.
 # Commit and push to GitHub
-# subprocess.run(["git", "add", "."])
-# subprocess.run(["git", "commit", "-m", "'commit from python script'"])
-# subprocess.run(["git", "push"])
-# print("Convesion finished - new docs should now be viewable on Read the Docs")
+subprocess.run(["git", "add", "."])
+subprocess.run(["git", "commit", "-m", "'commit from python script'"])
+subprocess.run(["git", "push"])
+print("Convesion finished - new docs should now be viewable on Read the Docs")

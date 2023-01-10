@@ -15,6 +15,10 @@ velit. Morbi ac ullamcorper tellus. Cras interdum lorem tortor, sit amet
 tempor mauris commodo eu. Quisque maximus velit arcu, et feugiat lacus
 sodales et. Duis tincidunt tempus faucibus.
 
+.. image:: media/3.1.jpg
+   :width: 4.875in
+   :height: 3.25in
+
 Heading 2
 ~~~~~~~~~
 
