@@ -1,4 +1,4 @@
-1 - Lorem Ipsum
+Lorem Ipsum
 ===============
 
 -  `What is Lorem Ipsum? <#id-1-LoremIpsum-WhatisLoremIpsum?>`__
