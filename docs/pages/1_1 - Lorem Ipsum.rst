@@ -40,6 +40,6 @@ Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
 original form, accompanied by English versions from the 1914 translation
 by H. Rackham
 
-.. image:: docs/media/1.jpg
+.. image:: media/1.jpg
    :width: 4.875in
    :height: 6.5in
