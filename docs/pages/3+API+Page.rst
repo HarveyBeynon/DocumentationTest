@@ -1,4 +1,4 @@
-3 - API Page
+API Page
 ============
 
 This is a third page that will be exported from the REST API… wish me
