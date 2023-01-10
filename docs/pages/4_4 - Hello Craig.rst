@@ -9,4 +9,4 @@ jdkljfklsjf]\\
 
 .. image:: media/1.jpg
    :width: 4.875in
-   :height: 3.25in
+   :height: 6.5in
