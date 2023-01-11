@@ -70,7 +70,7 @@ print("Resultant dictionary is : " + str(sorted_page_info))
 # page_ids = {"Lorem+Ipsum":"229377", "Lorem+Ipsum+Example":"851969", "API+Page":"491526"} # Hardcoding pageIds and Filenames - NOTE these file need to be in order.
 page_num = 1
 for key, value in sorted_page_info.items():
-    subprocess.run(["curl", "-D-", "-X", "GET", "-H", f"Authorization: Basic {API_KEY}", "-H", "Content-Type: application/json", f"https://harveybeynon.atlassian.net/wiki/exportword?pageId={value}", "--output", f"exported_docs/{page_num}_{key}.doc"])
+    subprocess.run(["curl", "-D-", "-X", "GET", "-H", f"Authorization: Basic {API_KEY}", "-H", "Content-Type: application/json", f"https://harveybeynon.atlassian.net/wiki/exportword?pageId={value}", "--output", f"exported_docs/{key}.doc"])
     page_num += 1
 
 base_dir = 'exported_docs\\' # Starting directory for directory walk
@@ -131,4 +131,3 @@ for file in pages_files:
 subprocess.run(["git", "add", "."])
 subprocess.run(["git", "commit", "-m", "'commit from python script'"])
 subprocess.run(["git", "push"])
-print("Convesion finished - new docs should now be viewable on Read the Docs")
