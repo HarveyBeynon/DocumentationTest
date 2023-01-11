@@ -7,7 +7,7 @@ fhndjskhfjksdhkj
 
 jdkljfklsjf]\\
 
-.. image:: media/4.1.1 three_dogs.jpg
+.. image:: media/4.1.1_three_dogs.jpg
    :alt: Three dogs
    :width: 4.875in
    :height: 3.25in
