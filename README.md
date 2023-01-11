@@ -13,4 +13,4 @@ Images are appended to the pages in order by replacing the image directive in th
 - 1.2.2_image.jpg (Second image in section 1 page 2)
 - 2.1.1_image.jpg (First image in section 2 page 1)
 
-**Note that the script requires a confluence API KEY saved as a .env variable**
+**Note that any images used on the confluence page needs to be saved it this repo's docs/pages/media directory**
