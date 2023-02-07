@@ -61,6 +61,6 @@ sapien, dapibus at odio pulvinar, viverra venenatis magna. Nullam
 ultrices mauris ac libero faucibus aliquam. Vestibulum ante ipsum primis
 in faucibus orci luctus et ultrices posuere cubilia curae;
 
-.. image:: ../docs/pages/media/downloaded_git/exported_docs\2 Lorem Ipsum Example/media/image1.tmp
+.. image:: 1/media/image1.jpeg
    :width: 3.33333in
    :height: 1.875in
