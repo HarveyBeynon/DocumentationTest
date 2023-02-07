@@ -5,7 +5,7 @@ Moist curry rice
 
 Here is an image of three dogs
 
-.. image:: ../docs/pages/media/downloaded_git/exported_docs\4 Hello Craig/media/image1.jpeg
+.. image:: media/4 Hello Craig/media/image1.jpeg
    :width: 4.875in
    :height: 3.25in
 
