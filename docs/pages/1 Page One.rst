@@ -19,7 +19,7 @@ of Letraset sheets containing Lorem Ipsum passages, and more recently
 with desktop publishing software like Aldus PageMaker including versions
 of Lorem Ipsum.
 
-.. image:: downloaded_git/docs/pages/media/1/media/image1.tmp
+.. image:: media/downloaded_git/docs/pages/media/1/media/image1.tmp
    :width: 4.875in
    :height: 3.25in
 
@@ -45,6 +45,6 @@ Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
 original form, accompanied by English versions from the 1914 translation
 by H. Rackham
 
-.. image:: downloaded_git/docs/pages/media/1/media/image2.tmp
+.. image:: media/downloaded_git/docs/pages/media/1/media/image2.tmp
    :width: 4.875in
    :height: 6.5in
