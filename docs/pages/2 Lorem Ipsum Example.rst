@@ -61,6 +61,6 @@ sapien, dapibus at odio pulvinar, viverra venenatis magna. Nullam
 ultrices mauris ac libero faucibus aliquam. Vestibulum ante ipsum primis
 in faucibus orci luctus et ultrices posuere cubilia curae;
 
-.. image:: media/page2/image1.jpeg
+.. image:: media\2 Lorem Ipsum Example/media/image1.jpeg
    :width: 3.33333in
    :height: 1.875in
