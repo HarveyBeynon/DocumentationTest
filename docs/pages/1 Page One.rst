@@ -19,10 +19,6 @@ of Letraset sheets containing Lorem Ipsum passages, and more recently
 with desktop publishing software like Aldus PageMaker including versions
 of Lorem Ipsum.
 
-.. image:: media/downloaded_git/docs/pages/media/1/media/image1.jpg
-   :width: 4.875in
-   :height: 4.875in
-
 1.2 Where does is come from?
 ----------------------------
 
@@ -45,6 +41,6 @@ Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
 original form, accompanied by English versions from the 1914 translation
 by H. Rackham
 
-.. image:: media/downloaded_git/docs/pages/media/1/media/image2.jpg
+.. image:: media/downloaded_git/docs/pages/media/1/media/image1.jpg
    :width: 4.875in
    :height: 2.61458in
