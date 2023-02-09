@@ -61,6 +61,6 @@ sapien, dapibus at odio pulvinar, viverra venenatis magna. Nullam
 ultrices mauris ac libero faucibus aliquam. Vestibulum ante ipsum primis
 in faucibus orci luctus et ultrices posuere cubilia curae;
 
-.. image:: media/downloaded_git/docs/pages/media/2/media/image1.jpeg
+.. image:: media/downloaded_git/docs/pages/media/2/media/image1.jpg
    :width: 4.875in
    :height: 2.73958in

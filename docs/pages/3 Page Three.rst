@@ -19,7 +19,7 @@ velit. Morbi ac ullamcorper tellus. Cras interdum lorem tortor, sit amet
 tempor mauris commodo eu. Quisque maximus velit arcu, et feugiat lacus
 sodales et. Duis tincidunt tempus faucibus.
 
-.. image:: media/downloaded_git/docs/pages/media/3/media/image1.jpeg
+.. image:: media/downloaded_git/docs/pages/media/3/media/image1.jpg
    :width: 4.875in
    :height: 3.25in
 
@@ -35,6 +35,6 @@ lacus ut condimentum. Cras efficitur ut sapien ac venenatis. Nulla
 blandit ante metus, ut mattis velit blandit vel. Donec sit amet
 venenatis est. Donec mollis rhoncus quam, at auctor justo sagittis eget.
 
-.. image:: media/downloaded_git/docs/pages/media/3/media/image2.jpeg
+.. image:: media/downloaded_git/docs/pages/media/3/media/image2.jpg
    :width: 4.875in
    :height: 2.08333in
