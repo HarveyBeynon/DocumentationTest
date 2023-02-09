@@ -1,0 +1,342 @@
+Date: Thu, 9 Feb 2023 09:34:44 +0000 (UTC)
+Message-ID: <892167688.55.1675935284014@1154d6483d9f>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_54_559721760.1675935284014"
+
+------=_Part_54_559721760.1675935284014
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>6 Page Six</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>6 Page Six</h1>
+    <div class=3D"Section1">
+        <p>fkldskalf; kfdlsa klfd; sa=E2=80=99k fld;s 'a</p>
+<p>fdklsk alf;ks</p>
+<p>kdl sa;'</p><span class=3D"confluence-embedded-file-wrapper image-center=
+-wrapper"><img class=3D"confluence-embedded-image image-center" loading=3D"=
+lazy" src=3D"559e2844a2d13d5d0fda5cda6cfbf1e4" data-image-src=3D"https://ha=
+rveybeynon.atlassian.net/wiki/download/attachments/5701633/image-20230209-0=
+93344.png?version=3D1&amp;modificationDate=3D1675935225922&amp;cacheVersion=
+=3D1&amp;api=3Dv2" data-height=3D"156" data-width=3D"545" data-unresolved-c=
+omment-count=3D"0" data-linked-resource-id=3D"5832705" data-linked-resource=
+-version=3D"1" data-linked-resource-type=3D"attachment" data-linked-resourc=
+e-default-alias=3D"image-20230209-093344.png" data-base-url=3D"https://harv=
+eybeynon.atlassian.net/wiki" data-linked-resource-content-type=3D"image/png=
+" data-linked-resource-container-id=3D"5701633" data-linked-resource-contai=
+ner-version=3D"1" data-media-id=3D"aa584b59-7abe-439d-8bf7-f5f7465a5186" da=
+ta-media-type=3D"file" width=3D"468" height=3D"133"></span>
+<p>jkfjsdkljf</p>
+<p>fkdlfkls;kfl;sd</p>
+<p>kdlskfl;s</p><span class=3D"confluence-embedded-file-wrapper image-cente=
+r-wrapper"><img class=3D"confluence-embedded-image image-center" loading=3D=
+"lazy" src=3D"08df2a89af03ebf708d2a182203db188" data-image-src=3D"https://h=
+arveybeynon.atlassian.net/wiki/download/attachments/5701633/image-20230209-=
+093401.png?version=3D1&amp;modificationDate=3D1675935243111&amp;cacheVersio=
+n=3D1&amp;api=3Dv2" data-height=3D"399" data-width=3D"868" data-unresolved-=
+comment-count=3D"0" data-linked-resource-id=3D"5898241" data-linked-resourc=
+e-version=3D"1" data-linked-resource-type=3D"attachment" data-linked-resour=
+ce-default-alias=3D"image-20230209-093401.png" data-base-url=3D"https://har=
+veybeynon.atlassian.net/wiki" data-linked-resource-content-type=3D"image/pn=
+g" data-linked-resource-container-id=3D"5701633" data-linked-resource-conta=
+iner-version=3D"1" data-media-id=3D"94508935-a687-42de-8fee-e5d4a1700dfd" d=
+ata-media-type=3D"file" width=3D"468" height=3D"215"></span>
+<p></p>
+    </div>
+</body>
+</html>
+------=_Part_54_559721760.1675935284014
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/08df2a89af03ebf708d2a182203db188
+
+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
+CDIAAICIIAMAAIgIMgAAgIggAwAAiAgyAACAiCADAACICDIAAICIIAMAAIgIMlZi7P0GAIDHIMgA
+AAAiggwAACAiyAAAACKCDAAAICLIAAAAIoIMAAAgIsgAAAAiggwAACAiyAAAACKCjHUYc352bB0A
+AO5AkAEAAEQEGQAAQESQAQAARAQZAABARJABAABEBBkAAEBEkAEAAEQEGQAAQESQsWKnvxV6t3N4
+kzQAANcjyAAAACKCDAAAICLIAAAAIoIMAAAgIsgAAAAiggwAACAiyAAAACKCDAAAICLIAAAAIoIM
+AAAgIsgAAAAiggwAACAiyAAAACKCDAAAICLIWLAx575Da68OrB/bCgAAVyLIAAAAIoIMAAAgIshY
+J5cjAgDwAAQZAABARJABAABEBBkAAEBEkAEAAEQEGQAAQESQAQAARAQZAABARJABAABEBBkAAEBE
+kAEAAEQEGQAAQESQAQAARAQZAABARJABAABEBBkAAEBEkAEAAEQEGQAAQESQsXxjTgAAeDCCDAAA
+ICLIYOt5zl8Y/isOAIDzCDIAAICIIAMAAIgIMgAAgIggAwAAiAgyAACAiCADAACICDIAAICIIAMA
+AIgIMgAAgIggAwAAiAgyAACAiCADAACICDIAAICIIAMAAIgIMgAAgIggY9HGnPt2a4dOfuPM7QAA
+8CNBBgAAEBFkAAAAEUEGAAAQEWQAAAARQQYAABARZAAAABFBBgAAEBFkLNhlbw7zvjEAAO5FkAEA
+AEQEGQAAQESQAQAARAQZAABARJABAABEBBkAAEBEkAEAAEQEGQAAQESQAQAARAQZKzLm/KVxpe8B
+AGD1BBkAAEBEkAEAAEQEGQAAQESQAQAARAQZAABARJABAABEBBkAAEBEkAEAAEQEGQAAQESQAQAA
+RAQZAABARJABAABEBBmLNeb8anw8t/3j+G4AALgVQQYAABARZAAAABFBBgAAEBFkAAAAEUEGAAAQ
+EWQAAAARQQYAABARZAAAABFBBgAAEBFkAAAAEUEGAAAQEWQAAAARQQYAABARZAAAABFBBgAAEBFk
+AAAAEUEGAAAQEWQAAAARQQYAABARZAAAABFBBgAAEBFkAAAAEUEGAAAQEWQs1vOcW2P++2Kz+GHj
+IQc/eNg4Yy8AACv39PQPnEN0A0S6mbQAAAAASUVORK5CYII=
+------=_Part_54_559721760.1675935284014
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/559e2844a2d13d5d0fda5cda6cfbf1e4
+
+iVBORw0KGgoAAAANSUhEUgAAAiEAAACcCAYAAACp3HsFAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK7SURBVHhe7daxEYAwEMCwhyFS5I79x4SGGeJG
+aryCr7WfdwAADrv/AgAcZUIAgIQJAQASJgQASJgQACBhQgCAhAkBABImBABImBAAIGFCAICECQEA
+EiYEAEiYEAAgYUIAgIQJAQASJgQASJgQACBhQgCAhAkBABImBABImBAAIGFCAICECQEAEiYEAEiY
+EAAgYUIAgIQJAQASJgQASJgQACBhQgCAhAkBABImBABImBAAIGFCAICECQEAEiYEAEiYEAAgYUIA
+gIQJAQASJgQASJgQACBhQgCAhAkBABImBABImBAAIGFCAICECQEAEiYEAEiYEAAgYUIAgIQJAQAS
+JgQASJgQACBhQgCAhAkBABImBABImBAAIGFCAICECQEAEiYEAEiYEAAgYUIAgIQJAQASJgQASJgQ
+ACBhQgCAhAkBABImBABImBAAIGFCAICECQEAEiYEAEiYEAAgYUIAgIQJAQASJgQASJgQACBhQgCA
+hAkBABImBABImBAAIGFCAICECQEAEiYEAEiYEAAgYUIAgIQJAQASJgQASJgQACBhQgCAhAkBABIm
+BABImBAAIGFCAICECQEAEiYEAEiYEAAgYUIAgIQJAQASJgQASJgQACBhQgCAhAkBABImBABImBAA
+IGFCAICECQEAEiYEAEiYEAAgYUIAgIQJAQASJgQASJgQACBhQgCAhAkBABImBABImBAAIGFCAICE
+CQEAEiYEAEiYEAAgYUIAgIQJAQASJgQASJgQACBhQgCAhAkBABImBABImBAAIGFCAICECQEAEiYE
+AEiYEAAgYUIAgIQJAQASJgQASJgQACBhQgCAhAkBABImBABImBAAIGFCAICECQEAEiYEAEiYEAAg
+YUIAgIQJAQASJgQASJgQACBhQgCAhAkBABImBABImBAAIGFCAICECQEAAjMfQBQChFrRcK0AAAAA
+SUVORK5CYII=
+------=_Part_54_559721760.1675935284014--
